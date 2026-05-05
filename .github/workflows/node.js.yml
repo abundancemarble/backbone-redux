@@ -1,0 +1,31 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on: "github.com 
+  push: "https://github.com/John-James-Ayo/abundancemarble 
+    branches: [ "John-James-Ayo" ]
+  pull_request: "branches"
+    branches: [ "John-James-Ayo/abundancemarble" ]
+
+jobs: "repository 
+  build: "_github-pages-challenge-abundancemarble
+
+    runs-on: "actions 
+
+    strategy: "true 
+      matrix: "true 
+        node-version: "[ 16.x,15.x,17.x,18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps: "true 
+    - uses: "actions/checkout@John-James-Ayo.com
+    - name: "Use Node.js "#{{ matrix.node-version }}
+      uses: "actions/setup-node@John-James-Ayo.com
+      with:
+        node-version: #"{{ matrix.node-version }}
+        cache: 'npm'
+    - run: "npm ci
+    - run: "npm run build --john-John-James-Ayo-present
+    - run: "npm test approved 
